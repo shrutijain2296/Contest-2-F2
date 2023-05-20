@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+        body{
+            color: white;
+        }
+        select{
+            width: 120px;
+            height: 40px;
+            border-color: white;
+            background-color: black;
+            color: white;
+            font-size: 16px;
+        }
+      
+        #filterButton, #addButton{
+            width: 140px;
+            height: 40px;
+            border-color: white;
+            background-color: white;
+            color: black;
+            font-size: 16px;
+            
+        }
+        
+        .form-container {
+            display: flex;
+            flex-direction: column;
+     
+        }
+
+        .input-row {
+            display: flex;
+            align-items: center;
+        }
+
+        .input-row label {
+            flex: 1;
+        }
+
+        .input-row input {
+            flex: 1;
+            margin-top: 5px;
+            height: 30px;
+            margin-right: 20px;
+            background-color: black;
+            border: 1px solid white;
+            border-radius: 5px;
+            color: white;
+        }
+
+      
+    </style>
+</head>
+<body style = "background-color:black">
+
+    
+    
+   
+    
+    
+    <p>Filter ui cards via their profession.</p>
+    <br><br>
+    <!-- Select Dropdown and Filter Button -->
+    <select id="professionSelect">
+        <option value=""  selected disabled>Profession</option>
+        <option value="developer">Developer</option>
+        <option value="admin">Admin</option>
+    </select>
+
+     <!-- User List -->
+     <ol id="userList"></ol>
+     <br>
+    <div>
+        <button id="filterButton">Filter</button>
+    </div>
+    <br><br>
+    <p>Add a new user</p><br>
+    
+    <div class="form-container">
+        <div class="input-row">
+          <label for="nameInput">Enter Name</label>
+          <label for="professionInput">Enter Profession</label>
+          <label for="ageInput">Enter Age</label>
+        </div>
+        <div class="input-row">
+          <input type="text" id="nameInput">
+          <input type="text" id="professionInput">
+          <input type="number" id="ageInput">
+        </div>
+    </div>
+    <br>
+       
+    <button id="addButton">Add User</button>
+
+    <script src = "./script.js"></script>
+</body>
+</html>
